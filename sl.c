@@ -98,18 +98,18 @@ int main(int argc, char *argv[])
     scrollok(stdscr, FALSE);
 
     for (x = COLS - 1; ; --x) {
-        if (LOGO == 1) {
-            if (add_sl(x) == ERR) break;
-        }
-        else if (C51 == 1) {
-            if (add_C51(x) == ERR) break;
-        }
-        else {
-            if (add_D51(x) == ERR) break;
-        }
-        getch();
-        refresh();
-        usleep(40000);
+	if (LOGO == 1) {
+	    if (add_sl(x) == ERR) break;
+	}
+	else if (C51 == 1) {
+	    if (add_C51(x) == ERR) break;
+	}
+	else {
+	    if (add_D51(x) == ERR) break;
+	}
+	getch();
+	refresh();
+	usleep(40000);
     }
     mvcur(0, COLS - 1, LINES - 1, 0);
     endwin();
