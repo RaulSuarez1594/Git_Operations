@@ -1,0 +1,20 @@
+From 7d3a25be21722a4d7918a05dc829d70012369549 Mon Sep 17 00:00:00 2001
+From: Jeff Schwab <jeff@orchardplatform.com>
+Date: Tue, 3 Jun 2014 09:07:01 -0400
+Subject: [PATCH 11/19] Ignore build product.
+
+---
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..b2bf82b
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++/sl
+-- 
+2.34.1
+

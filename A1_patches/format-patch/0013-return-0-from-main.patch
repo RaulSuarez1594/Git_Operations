@@ -1,0 +1,56 @@
+From ff91e242f96059a0bd7f85c5d3d2f57f4ba5b1a5 Mon Sep 17 00:00:00 2001
+From: Ryan Jacobs <ryan.mjacobs@gmail.com>
+Date: Mon, 19 Jan 2015 23:27:30 -0800
+Subject: [PATCH 13/19] return 0 from main()
+
+We declared int main(), and yet we didn't return an int!
+---
+ Makefile | 2 +-
+ sl.c     | 8 ++++++--
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 73a60b3..76a21ea 100644
+--- a/Makefile
++++ b/Makefile
+@@ -7,7 +7,7 @@
+ #==========================================
+ 
+ CC=gcc
+-CFLAGS=-O
++CFLAGS=-O -Wall
+ 
+ sl: sl.c sl.h
+ 	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+diff --git a/sl.c b/sl.c
+index d8f2d75..e23a596 100644
+--- a/sl.c
++++ b/sl.c
+@@ -1,11 +1,13 @@
+ /*========================================
+- *    sl.c: SL version 5.02
+- *        Copyright 1993,1998,2014
++ *    sl.c: SL version 5.03
++ *        Copyright 1993,1998,2014-2015
+  *                  Toyoda Masashi
+  *                  (mtoyoda@acm.org)
+  *        Last Modified: 2014/06/03
+  *========================================
+  */
++/* sl version 5.03 : Fix some more compiler warnings.                        */
++/*                                              by Ryan Jacobs    2015/01/19 */
+ /* sl version 5.02 : Fix compiler warnings.                                  */
+ /*                                              by Jeff Schwab    2014/06/03 */
+ /* sl version 5.01 : removed cursor and handling of IO                       */
+@@ -111,6 +113,8 @@ int main(int argc, char *argv[])
+     }
+     mvcur(0, COLS - 1, LINES - 1, 0);
+     endwin();
++
++    return 0;
+ }
+ 
+ 
+-- 
+2.34.1
+

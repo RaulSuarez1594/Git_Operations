@@ -1,0 +1,25 @@
+From 14b5a21fba112d03f2465ec7851e50e9763ffbc5 Mon Sep 17 00:00:00 2001
+From: Jakub Wilk <jwilk@jwilk.net>
+Date: Mon, 20 Feb 2017 10:34:16 +0100
+Subject: [PATCH 18/19] Fix typo
+
+---
+ sl.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sl.c b/sl.c
+index d8f2d75..e662544 100644
+--- a/sl.c
++++ b/sl.c
+@@ -33,7 +33,7 @@
+ /*                                              by Toyoda Masashi 1992/12/14 */
+ /* sl version 1.01 : Add more complex smoke.                                 */
+ /*                                              by Toyoda Masashi 1992/12/14 */
+-/* sl version 1.00 : SL runs vomitting out smoke.                            */
++/* sl version 1.00 : SL runs vomiting out smoke.                             */
+ /*                                              by Toyoda Masashi 1992/12/11 */
+ 
+ #include <curses.h>
+-- 
+2.34.1
+

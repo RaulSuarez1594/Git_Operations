@@ -1,0 +1,13 @@
+diff --git a/sl.c b/sl_ORSF.c
+index e549ac8..ffee579 100644
+--- a/sl.c
++++ b/sl_ORSF.c
+@@ -5,7 +5,7 @@
+  *                  (mtoyoda@acm.org)
+  *        Last Modified: 2014/06/03
+  *========================================
+- */
++*/
+ /* sl version 5.03 : Fix some more compiler warnings.                        */
+ /*                                              by Ryan Jacobs    2015/01/19 */
+ /* sl version 5.02 : Fix compiler warnings.                                  */

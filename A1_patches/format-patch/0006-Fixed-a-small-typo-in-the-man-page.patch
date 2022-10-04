@@ -1,0 +1,24 @@
+From ac475d0fbcf170c4b60df79768b973b934aa5a75 Mon Sep 17 00:00:00 2001
+From: zenptr <sultryweather@gmail.com>
+Date: Wed, 23 Apr 2014 09:25:54 +0300
+Subject: [PATCH 06/19] Fixed a small typo in the man page
+
+---
+ sl.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sl.1 b/sl.1
+index 4b50df7..d5ae884 100644
+--- a/sl.1
++++ b/sl.1
+@@ -31,6 +31,6 @@ C51 appears instead of D51.
+ .SH SEE ALSO
+ .BR ls (1)
+ .SH BUGS
+-It sometimes list directory contents.
++It sometimes lists directory contents.
+ .SH AUTHOR
+ Toyoda Masashi (mtoyoda@acm.org)
+-- 
+2.34.1
+

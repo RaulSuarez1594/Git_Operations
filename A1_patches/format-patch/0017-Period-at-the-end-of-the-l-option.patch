@@ -1,0 +1,30 @@
+From 7485c8bae502f19d17037f92eb833ed6b10cb80c Mon Sep 17 00:00:00 2001
+From: Allon Mureinik <mureinik@gmail.com>
+Date: Sat, 29 Aug 2015 11:40:45 +0300
+Subject: [PATCH 17/19] Period at the end of the -l option
+
+Added a period (.) at the end of the description of the -l option in the
+manpage ("little version"), to align it with the other options displayed
+there.
+
+Signed-off-by: Allon Mureinik <mureinik@gmail.com>
+---
+ sl.1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sl.1 b/sl.1
+index d5ae884..aaf3261 100644
+--- a/sl.1
++++ b/sl.1
+@@ -20,7 +20,7 @@ is a highly advanced animation program for curing your bad habit of mistyping.
+ An accident is occurring. People cry for help.
+ .TP
+ .B \-l
+-Little version
++Little version.
+ .TP
+ .B \-F
+ It flies like the galaxy express 999.
+-- 
+2.34.1
+

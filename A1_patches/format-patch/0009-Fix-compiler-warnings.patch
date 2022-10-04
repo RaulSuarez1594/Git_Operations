@@ -1,0 +1,68 @@
+From b8732b5f229548527e305e8ba8e860e0cd24cf07 Mon Sep 17 00:00:00 2001
+From: Jeff Schwab <jeff@orchardplatform.com>
+Date: Tue, 3 Jun 2014 08:57:11 -0400
+Subject: [PATCH 09/19] Fix compiler warnings.
+
+Declare functions before calling them.  Declare all return types.
+---
+ sl.c | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/sl.c b/sl.c
+index ff86bf3..9b88931 100644
+--- a/sl.c
++++ b/sl.c
+@@ -39,6 +39,14 @@
+ #include <unistd.h>
+ #include "sl.h"
+ 
++void add_smoke(int y, int x);
++void add_man(int y, int x);
++int add_C51(int x);
++int add_D51(int x);
++int add_sl(int x);
++void option(char *str);
++int my_mvaddstr(int y, int x, char *str);
++
+ int ACCIDENT  = 0;
+ int LOGO      = 0;
+ int FLY       = 0;
+@@ -145,7 +153,7 @@ int add_sl(int x)
+ }
+ 
+ 
+-add_D51(int x)
++int add_D51(int x)
+ {
+     static char *d51[D51PATTERNS][D51HIGHT + 1]
+         = {{D51STR1, D51STR2, D51STR3, D51STR4, D51STR5, D51STR6, D51STR7,
+@@ -185,7 +193,7 @@ add_D51(int x)
+     return OK;
+ }
+ 
+-add_C51(int x)
++int add_C51(int x)
+ {
+     static char *c51[C51PATTERNS][C51HIGHT + 1]
+         = {{C51STR1, C51STR2, C51STR3, C51STR4, C51STR5, C51STR6, C51STR7,
+@@ -226,7 +234,7 @@ add_C51(int x)
+ }
+ 
+ 
+-int add_man(int y, int x)
++void add_man(int y, int x)
+ {
+     static char *man[2][2] = {{"", "(O)"}, {"Help!", "\\O/"}};
+     int i;
+@@ -237,7 +245,7 @@ int add_man(int y, int x)
+ }
+ 
+ 
+-int add_smoke(int y, int x)
++void add_smoke(int y, int x)
+ #define SMOKEPTNS        16
+ {
+     static struct smokes {
+-- 
+2.34.1
+

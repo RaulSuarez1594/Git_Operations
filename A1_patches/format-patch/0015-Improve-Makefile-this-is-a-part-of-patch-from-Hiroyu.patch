@@ -1,0 +1,32 @@
+From 86711fc4c5195a6a188e36865b6b5d6120385476 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Micha=C5=82=20Zaj=C4=85c?= <michal.zajac@gmail.com>
+Date: Wed, 4 Mar 2015 21:31:25 +0100
+Subject: [PATCH 15/19] Improve Makefile, this is a part of patch from Hiroyuki
+ Yamamoto
+
+---
+ Makefile | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 73a60b3..f6e1fb2 100644
+--- a/Makefile
++++ b/Makefile
+@@ -6,8 +6,12 @@
+ #	Last Modified: 2014/03/31
+ #==========================================
+ 
+-CC=gcc
+-CFLAGS=-O
++all: sl
+ 
+ sl: sl.c sl.h
+ 	$(CC) $(CFLAGS) -o sl sl.c -lncurses
++
++clean:
++	rm -f sl
++
++distclean: clean
+-- 
+2.34.1
+

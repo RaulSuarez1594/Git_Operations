@@ -1,0 +1,164 @@
+From 02e8680ea523f31c4caba29e116035c0ec243152 Mon Sep 17 00:00:00 2001
+From: Chris Seymour <chris.j.seymour@hotmail.com>
+Date: Mon, 31 Mar 2014 10:15:38 +0100
+Subject: [PATCH 04/19] fix #5 version and copyright bump.
+
+---
+ LICENSE      |  2 +-
+ Makefile     |  9 ++++-----
+ README.ja.md |  2 +-
+ README.md    |  4 +---
+ sl.1         |  6 +++---
+ sl.1.ja      |  4 ++--
+ sl.c         | 14 ++++++++------
+ sl.h         | 11 ++++-------
+ 8 files changed, 24 insertions(+), 28 deletions(-)
+
+diff --git a/LICENSE b/LICENSE
+index 3e3b089..19b1c72 100644
+--- a/LICENSE
++++ b/LICENSE
+@@ -1,4 +1,4 @@
+-Copyright 1993,1998,2013 Toyoda Masashi (mtoyoda@acm.org)
++Copyright 1993,1998,2014 Toyoda Masashi (mtoyoda@acm.org)
+ 
+ Everyone is permitted to do anything on this program including copying,
+ modifying, and improving, unless you try to pretend that you wrote it.
+diff --git a/Makefile b/Makefile
+index 9dfb298..73a60b3 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,9 +1,9 @@
+ #==========================================
+-#    Makefile: makefile for sl 5.0
+-#	Copyright 1993, 1998, 2013
+-#                 Toyoda Masashi 
++#    Makefile: makefile for sl 5.1
++#	Copyright 1993, 1998, 2014
++#                 Toyoda Masashi
+ #		  (mtoyoda@acm.org)
+-#	Last Modified: 2013/ 5/ 5
++#	Last Modified: 2014/03/31
+ #==========================================
+ 
+ CC=gcc
+@@ -11,4 +11,3 @@ CFLAGS=-O
+ 
+ sl: sl.c sl.h
+ 	$(CC) $(CFLAGS) -o sl sl.c -lncurses
+-
+diff --git a/README.ja.md b/README.ja.md
+index 71d2a4d..42594b9 100644
+--- a/README.ja.md
++++ b/README.ja.md
+@@ -6,4 +6,4 @@ SL: キータイプ矯正ソフト
+ いまさらながら若干アップデートしました。
+ a,l,F,c オプションが有効です。機能は実行して確かめてください。
+ 
+-Copyright 1993,1998,2013 Toyoda Masashi (mtoyoda@acm.org)
++Copyright 1993,1998,2014 Toyoda Masashi (mtoyoda@acm.org)
+diff --git a/README.md b/README.md
+index 0fec299..f69a6ae 100644
+--- a/README.md
++++ b/README.md
+@@ -5,6 +5,4 @@ SL (Steam Locomotive) runs across your terminal when you type "sl" as
+ you meant to type "ls". It's just a joke command, and not usefull at
+ all.
+ 
+-Copyright 1993,1998,2013 Toyoda Masashi (mtoyoda@acm.org)
+-
+-
++Copyright 1993,1998,2014 Toyoda Masashi (mtoyoda@acm.org)
+diff --git a/sl.1 b/sl.1
+index c85d7f1..4b50df7 100644
+--- a/sl.1
++++ b/sl.1
+@@ -1,9 +1,9 @@
+ .\"
+-.\"  Copyright 1993,1998,2013 Toyoda Masashi (mtoyoda@acm.org)
+-.\"		              
++.\"  Copyright 1993,1998,2014 Toyoda Masashi (mtoyoda@acm.org)
++.\"
+ .\"	@(#)sl.1
+ .\"
+-.TH SL 1 "May 5, 2013"
++.TH SL 1 "March 31, 2014"
+ .SH NAME
+ sl \- cure your bad habit of mistyping
+ .SH SYNOPSIS
+diff --git a/sl.1.ja b/sl.1.ja
+index 8a1274e..ed758a8 100644
+--- a/sl.1.ja
++++ b/sl.1.ja
+@@ -1,9 +1,9 @@
+ .\"
+-.\"  Copyright 1993,2013 Toyoda Masashi.
++.\"  Copyright 1993,2014 Toyoda Masashi.
+ .\"		         (mtoyoda@acm.org)
+ .\"	@(#)sl.1
+ .\"
+-.TH SL 1 "May 5, 2013"
++.TH SL 1 "March 31, 2014"
+ .SH 名称
+ sl \- キータイプを矯正します。
+ .SH 形式
+diff --git a/sl.c b/sl.c
+index fd1336a..2eeceb3 100644
+--- a/sl.c
++++ b/sl.c
+@@ -1,19 +1,21 @@
+ /*========================================
+- *    sl.c: SL version 5.0
+- *	Copyright 1993,1998,2013
++ *    sl.c: SL version 5.01
++ *	Copyright 1993,1998,2014
+  *                Toyoda Masashi
+  *		  (mtoyoda@acm.org)
+- *	Last Modified: 2013/ 5/ 5
++ *	Last Modified: 2014/03/31
+  *========================================
+  */
++/* sl version 5.01 : removed cursor and handling of IO                       */
++/*                                              by Chris Seymour  2014/01/03 */
+ /* sl version 5.00 : add -c option                                           */
+-/*                                              by Toyoda Masashi 2013/ 5/ 5 */
++/*                                              by Toyoda Masashi 2013/05/05 */
+ /* sl version 4.00 : add C51, usleep(40000)                                  */
+ /*                                              by Toyoda Masashi 2002/12/31 */
+ /* sl version 3.03 : add usleep(20000)                                       */
+-/*                                              by Toyoda Masashi 1998/ 7/22 */
++/*                                              by Toyoda Masashi 1998/07/22 */
+ /* sl version 3.02 : D51 flies! Change options.                              */
+-/*                                              by Toyoda Masashi 1993/ 1/19 */
++/*                                              by Toyoda Masashi 1993/01/19 */
+ /* sl version 3.01 : Wheel turns smoother                                    */
+ /*                                              by Toyoda Masashi 1992/12/25 */
+ /* sl version 3.00 : Add d(D51) option                                       */
+diff --git a/sl.h b/sl.h
+index 903962b..a239011 100644
+--- a/sl.h
++++ b/sl.h
+@@ -1,9 +1,9 @@
+ /*========================================
+- *    sl.h: SL version 5.0
+- *	Copyright 1993,2002,2013
+- *                Toyoda Masashi 
++ *    sl.h: SL version 5.1
++ *	Copyright 1993,2002,2014
++ *                Toyoda Masashi
+  *		  (mtoyoda@acm.org)
+- *	Last Modified: 2013/ 5/ 5
++ *	Last Modified: 2014/03/31
+  *========================================
+  */
+ 
+@@ -148,6 +148,3 @@
+ #define C51WH12 "------'|oOo|=[]=-      ||      ||      |  ||=======_|__"
+ #define C51WH13 "/~\\____|___|/~\\_|  O=======O=======O   |__|+-/~\\_|     "
+ #define C51WH14 "\\_/         \\_/  \\____/  \\____/  \\____/      \\_/       "
+-
+-
+-
+-- 
+2.34.1
+
