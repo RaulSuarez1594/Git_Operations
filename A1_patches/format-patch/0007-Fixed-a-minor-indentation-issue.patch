@@ -1,0 +1,25 @@
+From 61bcf08f5febd1c6a58eb2872c57070b3d183351 Mon Sep 17 00:00:00 2001
+From: zenptr <sultryweather@gmail.com>
+Date: Wed, 23 Apr 2014 09:26:43 +0300
+Subject: [PATCH 07/19] Fixed a minor indentation issue
+
+---
+ sl.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sl.c b/sl.c
+index 2eeceb3..17f20bd 100644
+--- a/sl.c
++++ b/sl.c
+@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
+ 	else {
+ 	    if (add_D51(x) == ERR) break;
+ 	}
+-    getch();
++	getch();
+ 	refresh();
+ 	usleep(40000);
+     }
+-- 
+2.34.1
+

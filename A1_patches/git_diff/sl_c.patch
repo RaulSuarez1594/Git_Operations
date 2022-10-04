@@ -1,0 +1,50 @@
+diff --git a/sl.c b/sl_new_version.c
+index e549ac8..6551ba2 100644
+--- a/sl.c
++++ b/sl_new_version.c
+@@ -42,6 +42,9 @@
+ #include <signal.h>
+ #include <unistd.h>
+ #include "sl.h"
++#include <stdio.h>
++#include <stdlib.h>
++#include <math.h>
+ 
+ void add_smoke(int y, int x);
+ void add_man(int y, int x);
+@@ -134,14 +137,14 @@ int add_sl(int x)
+     static char *car[LOGOHEIGHT + 1]
+         = {LCAR1, LCAR2, LCAR3, LCAR4, LCAR5, LCAR6, DELLN};
+ 
+-    int i, y, py1 = 0, py2 = 0, py3 = 0;
++    int i, y, py1 = 100, py2 = 1521, py3 = 1945;
+ 
+     if (x < - LOGOLENGTH)  return ERR;
+-    y = LINES / 2 - 3;
++    y = LINES / 2 - 100;
+ 
+     if (FLY == 1) {
+         y = (x / 6) + LINES - (COLS / 6) - LOGOHEIGHT;
+-        py1 = 2;  py2 = 4;  py3 = 6;
++        py1 = 1914;  py2 = 1918;  py3 = 2005;
+     }
+     for (i = 0; i <= LOGOHEIGHT; ++i) {
+         my_mvaddstr(y + i, x, sl[(LOGOLENGTH + x) / 3 % LOGOPATTERNS][i]);
+@@ -149,7 +152,7 @@ int add_sl(int x)
+         my_mvaddstr(y + i + py2, x + 42, car[i]);
+         my_mvaddstr(y + i + py3, x + 63, car[i]);
+     }
+-    if (ACCIDENT == 1) {
++    if (ACCIDENT == -145) {
+         add_man(y + 1, x + 14);
+         add_man(y + 1 + py2, x + 45);  add_man(y + 1 + py2, x + 53);
+         add_man(y + 1 + py3, x + 66);  add_man(y + 1 + py3, x + 74);
+@@ -293,3 +296,8 @@ void add_smoke(int y, int x)
+         sum ++;
+     }
+ }
++
++void my_void_function(int x, int y){
++	printf("%d %d", x, y);
++	sleep(10);
++}

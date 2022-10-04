@@ -1,0 +1,17 @@
+diff --git a/README.md b/README.md
+index 885bcb9..9ce21a5 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,10 @@
+-# CTEP_Linux_M2_1_1
++SL(1): Cure your bad habit of mistyping
++=======================================
++
++SL (Steam Locomotive) runs across your terminal when you type "sl" as
++you meant to type "ls". It's just a joke command, and not useful at
++all.
++
++Copyright 1993,1998,2014 Toyoda Masashi (mtoyoda@acm.org)
++
++![](demo.gif)
+\ No newline at end of file

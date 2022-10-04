@@ -1,0 +1,33 @@
+From 38eb2acb04ce68b8466e86c22d8fa136ee0c52bd Mon Sep 17 00:00:00 2001
+From: Ryan Jacobs <ryan.mjacobs@gmail.com>
+Date: Mon, 19 Jan 2015 23:29:06 -0800
+Subject: [PATCH 14/19] properly declare our extern variables.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Was getting the compiler error:
+
+sl.c: In function ‘option’:
+sl.c:70:31: warning: unused variable ‘LONG’ [-Wunused-variable]
+     extern int ACCIDENT, FLY, LONG;
+---
+ sl.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sl.c b/sl.c
+index e23a596..1f8a9e2 100644
+--- a/sl.c
++++ b/sl.c
+@@ -67,7 +67,7 @@ int my_mvaddstr(int y, int x, char *str)
+ 
+ void option(char *str)
+ {
+-    extern int ACCIDENT, FLY, LONG;
++    extern int ACCIDENT, LOGO, FLY, C51;
+ 
+     while (*str != '\0') {
+         switch (*str++) {
+-- 
+2.34.1
+

@@ -1,0 +1,49 @@
+From e5e797625f648e1ace561236e2a80d673e7b2f4f Mon Sep 17 00:00:00 2001
+From: Jeff Schwab <jeff@orchardplatform.com>
+Date: Tue, 3 Jun 2014 09:06:38 -0400
+Subject: [PATCH 10/19] Bump version numbers.
+
+---
+ sl.c | 6 ++++--
+ sl.h | 4 ++--
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/sl.c b/sl.c
+index 9b88931..d8f2d75 100644
+--- a/sl.c
++++ b/sl.c
+@@ -1,11 +1,13 @@
+ /*========================================
+- *    sl.c: SL version 5.01
++ *    sl.c: SL version 5.02
+  *        Copyright 1993,1998,2014
+  *                  Toyoda Masashi
+  *                  (mtoyoda@acm.org)
+- *        Last Modified: 2014/03/31
++ *        Last Modified: 2014/06/03
+  *========================================
+  */
++/* sl version 5.02 : Fix compiler warnings.                                  */
++/*                                              by Jeff Schwab    2014/06/03 */
+ /* sl version 5.01 : removed cursor and handling of IO                       */
+ /*                                              by Chris Seymour  2014/01/03 */
+ /* sl version 5.00 : add -c option                                           */
+diff --git a/sl.h b/sl.h
+index a239011..6e7206e 100644
+--- a/sl.h
++++ b/sl.h
+@@ -1,9 +1,9 @@
+ /*========================================
+- *    sl.h: SL version 5.1
++ *    sl.h: SL version 5.02
+  *	Copyright 1993,2002,2014
+  *                Toyoda Masashi
+  *		  (mtoyoda@acm.org)
+- *	Last Modified: 2014/03/31
++ *	Last Modified: 2014/06/03
+  *========================================
+  */
+ 
+-- 
+2.34.1
+
